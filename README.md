@@ -10,5 +10,8 @@ go build reverse.go
 - Goto {path to the project} and run
 go install abhinayak.com/user/hello
 
-- Goto {path to the project}/bin and run
+- To run Goto {path to the project}/bin and run
 ./hello
+
+- To run test Goto {path to the project}/gotest/{folder with test}
+go test
