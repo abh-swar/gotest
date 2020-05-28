@@ -5,11 +5,13 @@ import (
 	"math"
 )
 
+// Geometry interface
 type Geometry interface {
 	area() float64
 	perim() float64
 }
 
+// Rectangle struct that hold the data
 type Rectangle struct {
 	width, height float64
 }
@@ -19,10 +21,10 @@ func (r Rectangle) area() float64 {
 }
 
 func (r Rectangle) perim() float64 {
-	return 2 * r.width + 2 * r.height
+	return 2*r.width + 2*r.height
 }
 
-
+// Circle struct that hold the data
 type Circle struct {
 	radius float64
 }
@@ -34,7 +36,6 @@ func (c Circle) area() float64 {
 func (c Circle) perim() float64 {
 	return 2 * math.Pi * c.radius
 }
-
 
 func measure(g Geometry) {
 	fmt.Printf("Measure called for %T: ", g)
